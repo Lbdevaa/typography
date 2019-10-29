@@ -71,18 +71,18 @@
 					<li class="nav__item">
 						<a href="#" class="nav__url">Фотопечать</a>
 						<ul class="second-nav">
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
-							<li class="second-nav__item"><a href="#" class="second-nav__url"></a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Визитки</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Листовки/Флаеры</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Плакаты/Постеры</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Каталоги</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Буклеты/Лифлеты</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Блокноты</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Конверты</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Фирменные бланки</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Ризография</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Календари</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Стикербуки/Стикерпаки</a></li>
+							<li class="second-nav__item"><a href="#" class="second-nav__url">Магниты</a></li>
 						</ul>
 					</li>
 					<li class="nav__item">
@@ -160,29 +160,42 @@
 	
 	<footer class="footer">
 		<section class="consult">
-			<div class="container">
+			<div class="container grid">
 				<div class="consult-box__form-box">
 					<h2 class="consult-box__title">Проконсультируем вас в течении 10 минут и подарим скидку 10% на первый заказ!</h2>
-					<input type="text" placeholder="Как Вас зовут?">
-					<input type="tel" placeholder="Телефон">
-					<textarea name="" id="" cols="30" rows="10" placeholder="Комментарий к заявке"></textarea>
-					<button type="submit">Отправить заявку!</button>
+					<div class="consult-box__form">
+						<input type="text" class="consult-box__input-text" placeholder="Как Вас зовут?">
+						<input type="tel" class="consult-box__input-phone" placeholder="Телефон">
+						<textarea name="" id="" cols="30" rows="10" class="consult-box__input-area"  placeholder="Комментарий к заявке"></textarea>
+					</div>
+					
+					<button class="main-btn consult-box__form-btn" type="submit">Отправить заявку!</button>
 				</div>
 				<div class="consult-box__contacts">
 					<h2 class="consult-box__title">НАШИ КОНТАКТЫ</h2>
-					<p class="consult-box__geo">г. Екатеринбург, Шейнкмана, 119</p>
-					<p class="constlt-box__mail">email.email@email.com</p>
-					<p class="consult-box__phone">8(999) 99-99-999</p>
+					<ul class="consult-box__list grid">
+						<li class="consult-box__item"><i class="icon-geo consult-box__icon"></i></li>
+						<li class="consult-box__item">г. Екатеринбург, Шейнкмана, 119</li>
+						<li class="consult-box__item"><i class="icon-mail consult-box__icon"></i></li>
+						<li class="consult-box__item">
+							<a href="mailto:name@email.com" class="consult-box__url">email.email@email.com</a>
+						</li>
+						<li class="consult-box__item"><i class="icon-phone consult-box__icon"></i></li>
+						<li class="consult-box__item">
+							<a href="tel:555-555-5555" class="consult-box__url">8(999) 99-99-999</a>
+								
+						</li>
+					</ul> 
 				</div>
 			</div>
 		</section>
-		<div class="container">
+		<div class="container grid">
 			<div class="info">
-				<img src="" alt="" class="logo footer__logo">
+				<img src="img/logo.png" alt="" class="logo footer__logo">
 				<p class="info__text">Lorem ipsum dolor sit amet, consectetur dolor sit amet.</p>
 				<p class="info__text">Сделано в <a href="#" class="info__text-url">Invite agency</a>.</p>
 			</div>
-			<ul class="footer-menu">
+			<ul class="footer-menu grid">
 				<li class="footer-menu__item"><a href="#" class="footer-menu__url">Карта сайта</a></li>
 				<li class="footer-menu__item"><a href="#" class="footer-menu__url">О компании</a></li>
 				<li class="footer-menu__item"><a href="/catalog.html" class="footer-menu__url">Каталог</a></li>
