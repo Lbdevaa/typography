@@ -6,4 +6,108 @@
 
 // Пользовательские стили
 
+
+.header
+
+.top-line 
+    border-bottom: 1px solid $blue
+    >div
+        
+    &__list
+        padding: 0 
+    &__item
+        display: inline-block
+        margin-right: 120px
+        &:last-child 
+            margin-right: 0 
+    &__url
+        text-decoration: none
+        color: $dark
+        font-size: 18px
+.mid-line 
+    grid-template-columns: repeat(4, max-content) 
+    justify-content: space-between
+    align-items: center
+    padding: em(30px) 0
+    &__phone-time
+        display: grid
+        grid-template-columns: max-content max-content
+        grid-column-gap: 14px
+    &__time
+        margin: 0
+        grid-column: 2/3
+    &__phone
+        font-size: em(36px)
+        color: $dark
+        text-decoration: none
+        grid-column: 1/2
+        grid-row: 1/3
+    &__cart-url
+        position: relative 
+        &::after
+            content: '99'
+            position: absolute
+            z-index: 11
+            font-family: $teko
+            font-size: em(24px)
+            line-height: 1.5 
+            right: 0
+            top: 0 
+            width: 30px
+            height: 30px
+            background-color: $yellow
+            text-align: center
+            border-radius: 1000em 
+            color: $dark
+                        // display: block
+
+.main-btn
+    color: $dark
+    background-color: $yellow
+    font-size: em(24px)
+    text-decoration: none
+    font-family: $teko
+    padding: em(4px) em(27px)
+    border-radius: 5px
+    height: 50px
+    line-height: 1.5
+
+.nav
+    background-color: $blue
+    padding: 0
+    margin: 0
+    position: relative
+    &__item
+        display: inline-block
+        
+        &:hover
+            background-color: #fff
+            .nav__url                
+                color: $blue
+            .second-nav
+                display: block 
+    &__url
+        color: #ffffff
+        text-decoration: none
+        font-family: $adiHaus
+        font-size: em(16px)
+        padding: em(12px) em(20px)
+        display: block
+
+
+.second-nav
+    list-style: none
+    padding: em(11px) 0
+    background-color: #ffffff
+    display: none
+    position: absolute
+    &__item
+        padding: 0 em(16px)
+        margin-bottom: em(16px)
+        // text-decoration: none
+    &__url  
+        color: $dark
+        font-size: em(16px)
+    
+
 @import "media" // Всегда в конце
