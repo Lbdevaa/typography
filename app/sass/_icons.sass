@@ -21,14 +21,8 @@
 @function icon-char($filename)
     $char: ""
 
-    @if $filename == geo
+    @if $filename == arrow-right
         $char: "\E001"
-    
-    @if $filename == mail
-        $char: "\E002"
-    
-    @if $filename == phone
-        $char: "\E003"
     
     @return $char
 
@@ -42,9 +36,5 @@
         
         content: icon-char($filename)
 
-.icon-geo
-    +icon(geo)
-.icon-mail
-    +icon(mail)
-.icon-phone
-    +icon(phone)
+.icon-arrow-right
+    +icon(arrow-right)

@@ -2,17 +2,18 @@
 @import "libs"
 @import "vars"
 @import "base"
-@import "icons"
+// @import "icons"
 
 // Пользовательские стили
 
-
+ 
 .header
-
+    >.container
+        max-width: 1180px
 .top-line 
     border-bottom: 1px solid $blue
     >div
-        
+        max-width: 1180px
     &__list
         padding: 0 
     &__item
@@ -28,7 +29,7 @@
     grid-template-columns: repeat(4, max-content) 
     justify-content: space-between
     align-items: center
-    padding: em(30px) 0
+    padding: em(30px) 0 
     &__phone-time
         display: grid
         grid-template-columns: max-content max-content
@@ -76,14 +77,19 @@
     cursor: pointer
     &:hover
         background: none
+.bot-line
+    border-bottom: 1px solid #E5E5E5
+
 .nav
     background-color: $blue
     padding: 0
     margin: 0
     position: relative
+    >div
+        max-width: 1180px
     &__item
         display: inline-block
-        
+        position: relative
         &:hover
             background-color: #fff
             .nav__url                
@@ -105,6 +111,8 @@
     background-color: #ffffff
     display: none
     position: absolute
+    z-index: 15
+    width: 100%
     &__item
         padding: 0 em(16px)
         margin-bottom: em(16px)
@@ -114,13 +122,14 @@
         font-size: em(16px)
 .logo
     max-width: 270px
-.footer
+.footer 
     &>div
         padding: 40px 20px
         grid-template-columns: 1fr 1fr 
+        max-width: 1180px
     &__logo
         margin-bottom: 30px
-    
+
 .info
 
     &__text
@@ -151,8 +160,15 @@
 .consult
     background: url(../img/footer-bg.png) no-repeat center center
     box-shadow: inset 0 0 240px 240px rgba(0, 0, 0, 0.66) 
+    position: relative
     >div
         grid-template-columns: 1fr 1fr 
+.consult-bg
+    position: absolute
+    background-color: $blue
+    width: 39vw
+    right: 0
+    height: 80%
 .consult-box 
     &__title
         color: #ffffff
@@ -192,10 +208,9 @@
         &:hover
             color: $yellow
 
-    &__contacts
-        background-color: $blue
+    &__contacts 
         opacity: 0.86
-        padding: em(30px) em(65px)
+        padding: em(30px) 0 em(30px) 15vw
     &__list
         list-style: none
         grid-template-columns: max-content 1fr
@@ -215,8 +230,248 @@
 
     &__icon
         font-size: 40px 
-    &__inpput-area  
+    &__input-area  
         max-height: 82px
  
+// slide main-page
+.slide
+    background: url(../img/footer-bg.png) no-repeat center center
+    box-shadow: inset 0 0 240px 240px rgba(0,0,0,.66)
+    position: relative
+    &>div
+        grid-template-columns: 1fr 1fr
+        padding: 95px 38px
+        // grid-column-gap: 92px
+.slide-bg
+    background-color: $blue
+    width: 60vw
+    height: 100%
+    z-index: 1
+    position: absolute
+.slide-left
+    max-width: 460px
+    z-index: 5
+    &__title
+        font-size: em(64px)
+        text-transform: uppercase
+        color: #ffffff
+        font-weight: normal
+        font-family: $teko
+        margin: 0 0 em(10px)
+        line-height: 1.03
+    &__subtitle
+        color: #ffffff
+        font-size: em(24px)
+        font-family: $adiHaus
+        line-height: 1.4
+        margin: 0 0 em(40px)
+    &__text
+        color: #ffffff
+        font-size: em(18px)
+        line-height: 1.4
+        font-family: $adiHaus
+        margin: 0 0 em(36px)
+    &__btn
+        font-size: em(30px)
+        line-height: 1.4
+        padding: em(8px) em(28px)
+.slide-right
+    z-index: 5
+    &__img
+        max-width: 350px
+        max-height: 242px
+        border-radius: 5px 
+        box-shadow: 18px 18px 0px 0px rgba(43,42,41,1)
+// pop section
+.section-title
+    font-size: em(36px)
+    font-family: $teko
+    line-height: 1.4
+    margin: 0
+    text-transform: uppercase  
+    &__num
+        font-size: em(8px)
+        font-family: $adiHaus
+    &_line
+        position: relative
+        &::after
+            content: ''
+            height: 1px
+            width: 140px
+            background-color: #C4C4C4
+            bottom: 0
+            left: 0
+            position: absolute
+.section-title_blue
+    color: $blue
+.pop-service
+    padding: em(65px) 0 
+    &__title
+        margin: 0 0 em(26px)
 
+.pop-products
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 32px 
+    &__url
+        display: block
+    &__img
+        border-radius: 5px
+        max-height: 173px
+        margin-bottom: 25px
+        width: 100%
+    &__title
+        font-size: em(18px)
+        color: $dark
+        font-family: $adiHaus
+        margin: 0
+    &__text
+        margin: 0 
+        font-family: $adiHaus
+        font-size: em(12px)
+        color: #6a6a6a
+
+// about-poligraphy
+.about-poligraphy 
+    margin-bottom: 90px
+    &__title
+        margin-bottom: em(16px)
+    &__box
+        margin-bottom: 35px 
+        grid-template-columns: 1fr 1fr
+        grid-gap: 40px 
+.about-poligraphy-right
+    &__text
+        font-size: em(18px)
+        font-family: $adiHaus
+        line-height: 1.65
+        margin: 0 0 em(36px)
+        color: $dark
+        max-width: 490px 
+.section-btn_right
+    background: none
+    border: 1px solid $blue
+    float: right
+    position: relative
+    color: $blue
+    padding: em(4px) em(54px)  em(4px) em(26px)
+    &::after
+        content: '›'
+        position: absolute 
+        font-size: 40px
+        line-height: 40px
+        top: 4px
+        right: 50px
+.about-poligraphy-left
+    &__img
+        width: 100%
+        max-height: 300px
+        border-radius: 5px
+        
+
+.advantages
+    grid-template-columns: repeat(4, 1fr)  
+    grid-column-gap: 65px
+    &__title
+        font-size: 30px
+        color: $blue
+        line-height: 1.65
+        font-family: $teko
+        margin: 0 0 em(18px) 
+        grid-column: 1/5
+    &__box
+        justify-items: center
+    &__img
+        max-width: 70px
+        max-height: 70px
+    &__name
+        font-size: em(24px)
+        line-height: 1.65
+        color: $dark
+        margin: 0
+        text-align: center
+        font-family: $teko
+    &__text
+        text-align: center
+        margin: 0
+        font-family: $adiHaus
+        font-size: em(14px)
+        line-height: 1.65
+        // max-width: 245px
+
+.main-section-calc
+    margin-bottom: 65px
+    &__title
+        margin-bottom: em(20px)
+.main-page-calc
+    height: 680px
+    border: 1px solid #C4C4C4
+    border-radius: 5px
+    
+
+.main-pay
+    margin-bottom: 65px
+       
+    &__title
+        margin-bottom: em(16px)
+        grid-column: 1/4
+    &__items
+        grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 83px
+        border-bottom: 1px solid #C4C4C4
+    &__box 
+        margin-bottom: 55px
+        display: grid
+        grid-template-rows: max-content max-content
+        grid-template-columns: max-content max-content
+        align-items: center
+        
+    &__name
+        font-size: em(30px) 
+        display: inline-block
+        margin: 0 
+        font-family: $teko
+        line-height: 1.4
+        max-width: max-content
+    &__img
+        display: inline-block
+    &__text
+        margin: 0 
+        font-family: $adiHaus
+        font-size: em(18px)
+        line-height: 1.65 
+        max-width: 303px
+        grid-column: 1/3
+    &__url
+        color: $blue
+
+.works
+    margin-bottom: 60px
+    &__title
+        margin-bottom: em(20px)
+    &__box
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(14,1fr)
+        max-height: 585px
+        margin-bottom: 55px
+    &__img 
+        // height: 100%    
+        // 1 и 3
+        object-fit: cover
+        width: 100%
+        height: 100%
+    &__img:nth-child(-n+4):nth-child(odd) 
+        grid-row: 1/6
+        // 2 и 4
+    &__img:nth-child(-n+4):nth-child(even) 
+        grid-row: 2/9
+        // 5 и 7
+    &__img:nth-child(n+5):nth-child(odd) 
+        grid-row: 6/13
+        // 2 и 4
+    &__img:nth-child(n+5):nth-child(even) 
+        grid-row: 9/13    
+    &__btn
+        grid-column: 4/5
+        grid-row: 14/15
+        width: max-content
 @import "media" // Всегда в конце
