@@ -493,6 +493,8 @@
 // delivery
 .delivery
     margin-bottom: 70px
+    &__title
+        margin-bottom: em(16px)
     >div
         grid-template-columns: 1fr 1fr
         grid-column-gap: 50px
@@ -548,4 +550,76 @@
 .acquiring
     height: 500px
     background-color: #c4c4c4
+
+// about
+.about
+    
+    margin-bottom: 35px
+    &__title
+        margin-bottom: em(18px)
+        grid-column: 1/7
+    >div
+        grid-template-columns: repeat(6, 1fr)
+        grid-column-gap: 70px
+        border-bottom: 1px solid #C4C4C4 
+        padding-bottom: 65px
+.about-gallery
+    border-radius: 5px
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-column: 1/5
+    grid-gap: 5px
+    &__item:first-of-type
+        grid-column: 1/5
+    &__img
+        border-radius: 5px
+.line-box
+    grid-column: 5/7
+    display: grid
+    grid-row-gap: 20px
+    &__text-box
+        display: grid
+        grid-template-columns: max-content 1fr
+        grid-gap: 20px
+    &__text
+        font-size: em(18px)
+        line-height: 1.65
+        margin: 0
+
+.about-slider
+    text-align: center
+    margin-bottom: 75px
+    &__title
+        color: $blue
+        font-size: em(30px)
+        margin: 0 0 em(18px)
+        font-family: $teko
+        font-weight: normal
+    &__text
+        font-size: em(18px)
+        line-height: 1.65
+        margin: 0 
+
+.services
+
+    &__title
+        margin-bottom: em(18px) 
+    &__box
+        grid-template-columns: repeat(5, 1fr)
+        grid-gap: 25px
+        margin-bottom: 125px 
+.small-box  
+    border-right: 1px solid #e5e5e5
+    padding-right: 15px
+    &:last-child
+        border-right: none
+    &__title    
+        color: $blue
+        font-size: em(18px)
+        margin: 0 0 em(22px)
+    &__text
+        color: #6A6A6A
+        font-size: em(14px)
+        margin: 0
+    &__url
+        color: $blue
 @import "media" // Всегда в конце
