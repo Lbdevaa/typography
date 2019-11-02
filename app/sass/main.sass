@@ -5,6 +5,8 @@
 // @import "icons"
 
 // Пользовательские стили
+h2 
+    font-weight: 500
 .breadcrumbs    
     // font-family: $adiHuas
     padding: 25px 0 
@@ -134,6 +136,7 @@
         color: $dark
         font-size: em(16px)
 .logo
+    max-height: 100px
     max-width: 270px
 .footer 
     &>div
@@ -179,9 +182,9 @@
 .consult-bg
     position: absolute
     background-color: $blue
-    width: 39vw
+    width: 45vw
     right: 0
-    height: 80%
+    height: 85%
 .consult-box 
     &__title
         color: #ffffff
@@ -193,7 +196,7 @@
         text-transform: uppercase
         max-width: 500px
     &__form-box
-        padding: 30px 0 30px 40px
+        padding: 30px 0
     &__form
         max-width: 380px
         input, textarea
@@ -207,13 +210,7 @@
                 color: #ffffff
                 font-size: em(14px)
                 font-family: $adiHaus
-                line-height: 1.2
-    &__input-text
-        
-    &__input-phone
-
-    &__input-area
-
+                line-height: 1.2 
     &__form-btn
         color: #ffffff
         border-color: #ffffff
@@ -223,7 +220,7 @@
 
     &__contacts 
         opacity: 0.86
-        padding: em(30px) 0 em(30px) 15vw
+        padding: em(30px) 0 em(30px) 8vw
     &__list
         list-style: none
         grid-template-columns: max-content 1fr
@@ -242,7 +239,8 @@
         text-decoration: none 
 
     &__icon
-        font-size: 40px 
+        height: 50px
+        width: 50px
     &__input-area  
         max-height: 82px
  
@@ -253,7 +251,7 @@
     position: relative
     &>div
         grid-template-columns: 1fr 1fr
-        padding: 95px 38px
+        padding: 90px 38px
         // grid-column-gap: 92px
 .slide-bg
     background-color: $blue
@@ -270,14 +268,14 @@
         color: #ffffff
         font-weight: normal
         font-family: $teko
-        margin: 0 0 em(10px)
+        margin: 0 0 em(6px)
         line-height: 1.03
     &__subtitle
         color: #ffffff
         font-size: em(24px)
         font-family: $adiHaus
         line-height: 1.4
-        margin: 0 0 em(40px)
+        margin: 0 0 em(30px)
     &__text
         color: #ffffff
         font-size: em(18px)
@@ -291,8 +289,8 @@
 .slide-right
     z-index: 5
     &__img
-        max-width: 350px
-        max-height: 242px
+        // max-width: 350px
+        // max-height: 242px
         border-radius: 5px 
         box-shadow: 18px 18px 0px 0px rgba(43,42,41,1)
 // pop section
@@ -366,14 +364,14 @@
     float: right
     position: relative
     color: $blue
-    padding: em(4px) em(54px)  em(4px) em(26px)
+    // padding: em(4px) em(54px)  em(4px) em(20px)
     &::after
         content: '›'
         position: absolute 
         font-size: 40px
         line-height: 40px
         top: 4px
-        right: 50px
+        right: 20px
 .about-poligraphy-left
     &__img
         width: 100%
@@ -392,10 +390,10 @@
         margin: 0 0 em(18px) 
         grid-column: 1/5
     &__box
-        justify-items: center
+        justify-items: center 
     &__img
         max-width: 70px
-        max-height: 70px
+        height: 70px
     &__name
         font-size: em(24px)
         line-height: 1.65
@@ -447,6 +445,7 @@
         max-width: max-content
     &__img
         display: inline-block
+        height: 54px
     &__text
         margin: 0 
         font-family: $adiHaus
@@ -466,22 +465,43 @@
         grid-template-rows: repeat(14,1fr)
         max-height: 585px
         margin-bottom: 55px
-    &__img 
-        // height: 100%    
-        // 1 и 3
+    &__name, &__text
+        display: none
+        color: #ffffff
+        margin: 0 0 em(6px)
+        // display: none 
+    &__name
+        font-size: em(24px)
+        line-height: 1.65
+    &__text
+        font-size: em(13px)
+        line-height: 1.65
+    &__item 
+        // height: 100%     
+        padding: em(30px) em(30px) 0
+        text-decoration: none
+        text-align: center
         object-fit: cover
         width: 100%
         height: 100%
-    &__img:nth-child(-n+4):nth-child(odd) 
+        background-image: url(../img/work2.png)
+        background-repeat: no-repeat
+        background-position: center center 
+        &:hover 
+            box-shadow: inset 0 0 240px 240px #1b5d80b0
+            .works__text, .works__name
+                display: block
+            
+    &__item:nth-child(-n+4):nth-child(odd) 
         grid-row: 1/6
         // 2 и 4
-    &__img:nth-child(-n+4):nth-child(even) 
+    &__item:nth-child(-n+4):nth-child(even) 
         grid-row: 2/9
         // 5 и 7
-    &__img:nth-child(n+5):nth-child(odd) 
+    &__item:nth-child(n+5):nth-child(odd) 
         grid-row: 6/13
         // 2 и 4
-    &__img:nth-child(n+5):nth-child(even) 
+    &__item:nth-child(n+5):nth-child(even) 
         grid-row: 9/13    
     &__btn
         grid-column: 4/5
@@ -584,7 +604,9 @@
         font-size: em(18px)
         line-height: 1.65
         margin: 0
-
+    &__img
+        max-height: 70px
+        max-width: 70px
 .about-slider
     text-align: center
     margin-bottom: 75px
@@ -622,4 +644,45 @@
         margin: 0
     &__url
         color: $blue
+
+
+// portfolio
+
+.portfolio
+
+    &__box
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px
+        margin-bottom: 45px
+    &__text-box
+        margin-bottom: em(150px)
+    &__text
+        font-size: em(18px)
+        line-height: 1.65 
+        margin: 0 0 em(25px)
+    
+.mid-box
+    border: 1px solid #C4C4C4
+    border-radius: 10px
+    padding: 10px
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: repeat(3, max-content)
+    grid-column-gap: 20px
+    grid-row-gap: 20px
+    &__img
+        border-radius: 5px      
+        grid-row: 1/4
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__title
+        font-size: em(18px)
+        line-height: 1.4
+        margin: 0
+    &__text
+        margin: 0
+        max-width: 235px
+    &__btn
+        max-width: 210px
+
 @import "media" // Всегда в конце
