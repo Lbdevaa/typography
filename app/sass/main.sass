@@ -836,6 +836,10 @@ h2
     &__info-box
 
     &__geo
+        grid-row-gap: 40px
+    &__map
+        height: 264px
+        background-color: #c4c4c4
 .info-box
     grid-template-columns: 1fr 1fr
     padding-right: 80px
@@ -853,5 +857,23 @@ h2
     &__url
         color: $blue
         font-size: em(18px)
+.place
+    grid-template-columns: 1fr 1fr 1fr
+    grid-column-gap: 12px
+    &__img
+        height: 256px
+       
+        object-fit: cover
+    &__text
+        font-size: em(14px)
+        margin: 0
+    &__url
+        display: block
+        height: 256px
+        margin-bottom: 12px
+        background: url(../img/place2.png) no-repeat center center
+        &:hover
+            background-color: #c4c4c4
+            box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.5) 
 
 @import "media" // Всегда в конце
