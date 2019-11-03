@@ -734,7 +734,7 @@ h2
     &__form
         margin-bottom: 45px
 .about-product
-    margin-bottom: 140px
+    margin-bottom: 125px
     >div
         grid-template-columns: 1fr 1fr
         grid-column-gap: 50px
@@ -943,4 +943,107 @@ h2
 .btn-box
     grid-template-columns: 1fr 1fr 1fr
     grid-column-gap: 12px
+
+// seals-page
+
+.seals
+    &__title
+        margin-bottom: em(18px)
+    &__maket
+        margin-bottom: 80px
+.maket
+    grid-template-columns: 1fr max-content
+    grid-gap: 27px 45px
+    &__title
+        font-size: em(18px) 
+        grid-column: 1/3
+        margin: 0
+.maket-box
+    grid-template-columns: repeat(5, 1fr)
+    grid-gap: 25px 15px
+    &__item
+        // width: 147px
+        height: 147px
+        display: block 
+        background-repeat: no-repeat
+        background-position: center center
+        object-fit: cover
+        padding: 20px
+        border: 1px solid #c4c4c4
+        border-radius: 5px
+        &.active
+            box-shadow: inset 0 0 240px 240px #1b5d8050
+    &__img
+        height: 100%
+        object-fit: cover
+    &__btn
+        grid-column: 1/6
+        max-width: 190px
+        justify-self: end
+.maket-choose
+    width: 232px
+    height: 100%
+    border: 1px solid #c4c4c4
+    border-radius: 5px
+    padding: 20px
+    &__title
+        text-align: center
+        color: $blue
+        font-size: em(24px)
+        font-family: $teko
+        margin: 0 0 em(16px)
+    &__text
+        color: #6a6a6a
+        font-size: em(12px)
+        margin: 0 0 em(12px)
+        &_red
+            color: #ff4b4b
+    &__field
+        color: #6a6a6a
+        display: block
+        font-size: em(14px)
+        margin: 0 0 em(34px)
+    &__total
+        color: $blue
+        font-size: em(24px)
+        font-family: $teko
+        margin: 0 em(26px) 0 0
+        display: inline-block
+    &__value
+        display: inline-block
+        max-width: 90px
+        font-size: em(9px)
+        line-height: 1.1
+        color: #c4c4c4
+        margin: 0
+.add 
+    &__title 
+        margin-bottom: em(18px)
+.product-box
+    grid-template-columns: repeat(6, 1fr)
+    grid-gap: 15px
+    margin-bottom: 80px
+    &__item
+        border: 1px solid #C4C4C4 
+        border-radius: 5px
+        padding: 20px  
+        grid-gap: 18px
+    &__name 
+        font-size: em(12px)
+        margin: 0 0 em(28px)
+        line-height: 1.4
+        text-align: center
+        padding: 0 em(10px)
+    &__img 
+        width: 125px
+        height: 125px
+        object-fit: cover
+        margin-bottom: 10px
+    &__price
+        font-size: em(18px)
+        margin: 0 em(26px) 0 0
+        align-self: center 
+        display: inline-block
+    &__plus 
+        padding: 0 20px
 @import "media" // Всегда в конце
