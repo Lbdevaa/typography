@@ -103,6 +103,7 @@ h2
         position: relative
         padding: em(4px) em(44px) em(4px) em(26px)
         transform: translateY(-12%)
+        text-align: unset
         &::after
             content: '›'
             position: absolute
@@ -318,6 +319,7 @@ h2
     line-height: 1.4
     margin: 0
     text-transform: uppercase  
+    font-weight: 400
     &__num
         font-size: em(8px)
         font-family: $adiHaus
@@ -467,7 +469,7 @@ h2
         margin-bottom: em(20px)
     &__box
         grid-template-columns: repeat(4, 1fr)
-        grid-template-rows: repeat(14,1fr)
+        grid-template-rows: repeat(16, 1fr)
         max-height: 585px
         margin-bottom: 55px
     &__name, &__text
@@ -503,13 +505,14 @@ h2
         grid-row: 2/9
         // 5 и 7
     &__item:nth-child(n+5):nth-child(odd) 
-        grid-row: 6/13
+        grid-row: 6/14
         // 2 и 4
     &__item:nth-child(n+5):nth-child(even) 
-        grid-row: 9/13    
+        grid-row: 9/15  
+        background-image: url(../img/work3.png)
     &__btn
         grid-column: 4/5
-        grid-row: 14/15
+        grid-row: 16/17
         width: max-content
 
 
@@ -821,4 +824,34 @@ h2
         display: block
         margin: 0 auto
         max-width: 208px
+
+// contacts
+
+.contacts
+    margin-bottom: 125px
+    >div
+        grid-template-columns: 1fr 1fr
+    &__title
+        margin-bottom: em(16px)
+    &__info-box
+
+    &__geo
+.info-box
+    grid-template-columns: 1fr 1fr
+    padding-right: 80px
+    grid-gap: 60px
+    &__item
+
+    &__text
+        display: block
+        margin: 0
+        text-decoration: none
+        color: $dark
+        font-size: em(18px)
+        line-height: 1.65
+        // max-width: 150px
+    &__url
+        color: $blue
+        font-size: em(18px)
+
 @import "media" // Всегда в конце
