@@ -19,7 +19,441 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.breadcrumbs
+		font-size: em(12px)
+	.mid-line__btn , .bot-line , .top-line__list
+		display: none
+	.mid-line
+		grid-template-rows: 1fr 1fr
+		grid-template-columns: repeat(4,max-content)
+		grid-gap: 15px 30px
+		padding: 15px 0
+		&__time-box
+			grid-column: 1/2
+			grid-row: 1/3
+		&__phone-time
+			grid-row: 1/2
+			grid-column: 1/5
+			border-bottom: 1px solid #C4C4C4  
+		&__phone
+			grid-column: 3/5
+			font-size: em(20px)
+			justify-self: end
+		&__time
+			font-size: em(9px)
+			grid-column: 1/3
+		&__logo-box
+			grid-column: 1/3
+			grid-row: 2/3 
+		&__cart-url
+			width: 33px
+			height: 33px
+			grid-row: 2/3
+			grid-column: 3/4
+			justify-self: end
+			&::after
+				width: 15px
+				height: 15px
+				font-size: em(14px)
+				line-height: 1.3
+	.header
+		>div
+			border-bottom: 1px solid $blue
+		&__logo
+			max-width: 157px
+	.slide
+		>div
+			padding: em(30px)
+	.slide-bg
+		width: 100vw
+		
+	.slide-right
+		display: none
+	.slide-left
+		grid-column: 1/3
+		&__title
+			font-size: em(36px)
+		&__text
+			display: none
+		&__subtitle
+			font-size: em(14px)
+			line-height: 1.4
+			max-width: 265px
+		&__btn
+			font-size: em(18px)
+	.burger-menu
+		display: block
+		justify-self: end
+	.consult-bg
+		bottom: 0
+		height: 38%
+		width: 100vw
+	.consult
+		>div 
+			grid-template-columns: 1fr
+	.consult-box
+		&__title
+			font-size: em(24px)
+			line-height: 1.2
+			max-width: 265px
+		&__form-btn
+			display: block
+			margin: auto
+			font-size: em(18px)
+			margin-bottom: em(30px)
+		&__contacts
+			padding-left: 0 
+		&__list
+			padding: 0
+		&__item
+			font-size: em(14px)
+		&__icon
+			width: 40px
+			height: 40px
+	.footer
+		>div
+			grid-template-columns: 1fr
+		&__logo
+			max-width: 160px
+	.footer-menu
+		justify-self: start
+		display: inline-block
+		&__item
+			display: inline-block
+			margin-right: em(36px)
+			font-size: em(9px)
+	.main-btn
+		font-size: em(18px)	
+		min-width: 135px
+		height: max-content
+		&_right::after
+			line-height: 28px
+			right: 20px
+	.info
+		&__text
+			font-size: em(12px)
+	.section-title
+		font-size: em(24px)
+	.pop-service
+		padding: em(25px) 0
+		&__title
+			margin-bottom: em(14px)
+		&__pagination
+			display: block
+	.pop-products
+		grid-template-columns: 1fr 1fr
+		grid-gap: 20px 
+		&__item:nth-child(n+5)
+			display: none
+		&__title
+			font-size: em(14px)
+		&__text
+			font-size: em(9px)
+		&__img
+			margin-bottom: 12px
+		
+	.section-title__num
+		display: none
+	.section-title_line::after
+		display: none
+
+	.about-poligraphy__box 
+		grid-template-columns: 1fr
+		grid-gap: 20px
+		margin: 0
+	.about-poligraphy-right
+		&__text
+			font-size: em(12px)
+		&__btn
+			display: none
+	.advantages
+		grid-template-columns: 1fr 1fr
+		grid-gap: 30px
+		&__title
+			font-size: em(18px)
+			grid-column: 1/3
+			margin: 0
+		&__name
+			font-size: em(18px)
+		&__text
+			font-size: em(10px)
+			max-width: 145px
+
+	.main-pay
+		margin-bottom: 30px
+		>div 
+		&__box
+			grid-template-columns: max-content 1fr
+			grid-column-gap: 10px
+			margin-bottom: 20px
+		&__items
+			grid-template-columns: 1fr 
+		&__name
+			font-size: em(20px)
+		&__text
+			font-size: em(12px)
+	
+	.works
+		&__box
+			grid-template-columns: 1fr 1fr
+	 
+		&__item:nth-child(odd) 
+			grid-column: 1/2
+		&__item:nth-child(even)
+			grid-column: 2/3
+
+
+		// &__item:nth-child(-n+4):nth-child(odd) 
+		// 		grid-row: 5/12
+		// 		// 2 и 4
+		// &__item:nth-child(-n+4):nth-child(even) 
+		// 	grid-row: 2/9
+		// 	// 5 и 7
+		// &__item:nth-child(n+5):nth-child(odd) 
+		// 	grid-row: 6/14
+		// 	// 2 и 4
+		// &__item:nth-child(n+5):nth-child(even) 
+		// 	grid-row: 9/15   
+  
+		&__btn
+			grid-column: 1/3
+			justify-self: center
+			text-align: center
+			// padding-top: em(10px)
+			height: max-content
+
+	// about page
+	.about
+		margin-bottom: 20px
+		>div
+			grid-template-columns: 1fr
+			padding-bottom: 40px
+		&__title
+			grid-column: 1/2
+		&__box
+			grid-column: 1/2
+	.about-gallery
+		grid-column: 1/2
+		margin-bottom: 30px
+		&__item:nth-child(n+2)
+			display: none
+			
+	.line-box
+		&__text-box
+			grid-gap: 15px
+			align-items: center
+		&__img
+			max-height: 50px
+			max-width: 50px
+			grid-row: 1/3
+			margin: 0
+		&__text
+			font-size: em(12px)
+			max-width: 250px
+
+	.about-slider
+		&__title
+			font-size: em(20px)
+			// padding: 0 em(40px)
+			max-width: 280px
+			margin: 0 auto em(16px)
+		&__text
+			font-size: em(12px)
+			max-width: 260px
+			margin: 0 auto em(40px)
+	.services__box
+		grid-template-columns: 1fr
+		margin-bottom: 40px
+
+	.delivery
+		>div
+			grid-template-columns: 1fr
+			grid-gap: 40px
+		&__img
+			max-width: 34px
+			max-width: 34px 
+		&__text
+			font-size: em(12px)
+			max-width: 315px
+		&__box 
+	.map
+		margin-bottom: 40px
+		&__box
+			max-width: 100vw
+			max-height: 200px
+		&__block
+			display: none
+
+	.delivery-pay
+		margin-bottom: 40px
+		>div
+			grid-template-columns: 1fr
+		&__title
+			grid-column: 1/2
+		&__items
+			padding: 0
+			grid-row: 2/3
+	.acquiring
+		grid-row: 3/4
+
+	.main-pay
+		&__img
+			max-height: 33px
+
+	.portfolio
+		&__box
+			grid-template-columns: 1fr
+			margin-bottom: 40px
+		&__select
+			display: block
+		&__text-box
+			display: none
+	.mid-box
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: 1fr 1fr
+		&__img
+			grid-row: 1/3
+		&__title
+			font-size: em(12px)
+		&__text
+			display: none
+		&__btn
+			padding-top: 10px
+			width: 140px
+			&::after
+				right: 10px
 	/**/
+	.product
+		margin-bottom: 40px
+		>div
+			grid-template-columns: 1fr
+		&__img
+			display: none
+		&__img-dots
+			display: none
+		&__name
+			grid-row: 1/2
+			margin-bottom: em(14px)
+		&__right-box
+			grid-row: 3/4
+		&__img-box
+			grid-row: 2/3
+		&__add-btn, &__fast
+			display: block
+			margin-bottom: 15px
+	.about-product
+		margin-bottom: 40px
+		>div
+			grid-template-columns: 1fr
+			grid-row-gap: 40px
+		&__text-box
+			grid-row: 1/2
+		&__btn
+			float: none
+			display: block
+			max-width: 185px
+			margin: auto
+
+	.cart
+		margin-bottom: 65px
+		>div
+			display: block
+	.cart-box
+		&__item
+			grid-template-columns: 1fr repeat(3, max-content)
+			align-items: center
+			grid-column-gap: 5px
+			margin-bottom: 0
+		&__text, &__img , &__price
+			display: none
+		&__name
+			grid-column: 1/2
+			max-width: 120px
+			font-size: em(14px)
+		&__amount
+			width: 85px
+			grid-row: 1/2
+		&__total
+			grid-column: 3/4
+			font-size: em(16px)
+			
+		&__del
+			grid-column: 4/5
+			grid-row: 1/2
+	.total-box
+		margin: auto
+	.order-phone
+		display: block
+			// grid-template-columns: 1fr 1fr 1fr
+	.contacts
+		margin-bottom: 40px
+		>div
+			grid-template-columns: 1fr
+		
+	.info-box
+		grid-gap: 30px 50px
+		padding: 0
+		margin-bottom: 40px
+		&__text, &__url
+			font-size: em(12px)
+			text-align: center
+			display: block
+		&__img
+			margin: auto 
+	.place
+		&__text
+			font-size: em(10px)
+			line-height: 1.65
+	.maket
+		grid-template-columns: 1fr
+		&__title
+			grid-column: 1/2
+	.maket-box
+		grid-template-columns: 1fr 1fr 1fr
+		&__item
+		&__btn
+			grid-column: 1/4
+			margin: auto
+	.maket-choose
+		width: 100%
+	.product-box
+		grid-template-columns: 1fr 1fr
+		&__item
+			padding: 5px 10px
+	.stamp
+		>div
+			grid-template-columns: 1fr
+		&__title
+			grid-column: 1/2
+		&__form-box, &__doc-box
+			margin-bottom: 40px
+
+	.methods
+		grid-template-columns: 1fr 1fr
+		&__title
+			grid-column: 1/3
+			font-size: em(24px)
+		&__name
+			font-size: em(14px)
+	.layout
+		margin-bottom: 40px
+		&__title
+			font-size: em(24px)
+		&__text
+			font-size: em(14px)
+			margin-bottom: em(16px)
+		&__item
+			font-size: em(14px)
+			margin-bottom: em(16px)
+		&__btn-box
+			grid-template-columns: 1fr
+			max-width: 200px
+			margin: 0 auto 20px 
+			grid-gap: 10px
+		&__btn
+			font-size: em(14px)
+			padding: em(5px) em(10px)
+
 
 
 /* Custom, iPhone Retina */
