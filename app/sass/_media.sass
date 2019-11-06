@@ -268,10 +268,12 @@
 	.delivery
 		>div
 			grid-template-columns: 1fr
-			grid-gap: 40px
-		&__img
-			max-width: 34px
-			max-width: 34px 
+			grid-gap: 40px 
+		&__title 
+			&_car, &_house
+				&::before
+					width: 32px
+					height: 32px 
 		&__text
 			font-size: em(12px)
 			max-width: 315px
@@ -364,15 +366,18 @@
 			align-items: center
 			grid-column-gap: 5px
 			margin-bottom: 0
-		&__text, &__img , &__price
+		&__text, &__img , &__price, &__thing
 			display: none
 		&__name
 			grid-column: 1/2
 			max-width: 120px
 			font-size: em(14px)
-		&__amount
+		&__amount-box
 			width: 85px
 			grid-row: 1/2
+		&__amount
+			width: 30px
+			font-size: em(14px)
 		&__total
 			grid-column: 3/4
 			font-size: em(16px)

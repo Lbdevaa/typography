@@ -538,6 +538,32 @@ h2
     margin-bottom: 70px
     &__title
         margin-bottom: em(16px)
+        &_car
+            position: relative
+            padding-left: em(30px)
+            &::before 
+                content: ''
+                background-image: url(../img/car.png)
+                background-size: cover
+                position: absolute
+                width: 52px
+                height: 52px
+                left: 0
+                bottom: 0
+                margin-right: 20px
+        &_house
+            position: relative
+            padding-left: em(30px)
+            &::before 
+                content: ''
+                background-image: url(../img/house.png)
+                background-size: cover
+                position: absolute
+                width: 52px
+                height: 52px
+                left: 0
+                bottom: 0
+                margin-right: 20px
     >div
         grid-template-columns: 1fr 1fr
         grid-column-gap: 50px
@@ -548,10 +574,7 @@ h2
         &_blue
             margin: 0
             font-size: em(14px)
-            color: $blue
-    &__img
-        max-width: 55px
-        max-height: 55px
+            color: $blue 
 .map
     position: relative
     margin-bottom: 85px
@@ -810,16 +833,23 @@ h2
         font-family: $teko
         font-size: em(30px)
         grid-column: 5/6
-    &__amount
-        grid-column: 2/3
-        width: 124px
+    &__amount-box
+        grid-column: 2/3 
         height: 42px
+        border: 1px solid #c4c4c4
         border-radius: 5px
-        padding: em(13px)
+        padding: em(8px) em(11px)  
+    &__minus, &__plus
+        cursor: pointer 
+    &__amount, &__minus, &__plus
+        border: none
+        width: 40px
         font-size: em(18px)
         font-family: $adiHaus
         color: $dark
         text-align: center
+    &__thing
+        color: #c4c4c4
     &__text
         grid-column: 3/6
         margin: 0
