@@ -29,7 +29,10 @@ gulp.task('browser-sync', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery/dist/jquery.min.js', 
+		// 'app/libs/Inputmask/inputmask.binding.js',
+		// 'app/libs/Inputmask/jquery.inputmask.min.js',
+		'app/libs/popup/jquery.magnific-popup.min.js',	
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

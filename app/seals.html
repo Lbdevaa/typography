@@ -21,8 +21,8 @@
 <body>
 	<header class="header">
 		<div class="top-line">
-			<div class="container">
-				<ul class="top-line__list">
+			<div class="container star">
+				<ul class="top-line__list grid">
 					<li class="top-line__item"><a href="/about.html" class="top-line__url">О компании</a></li>
 					<li class="top-line__item"><a href="/contacts.html" class="top-line__url">Контакты</a></li>
 					<li class="top-line__item"><a href="/portfolio.html" class="top-line__url">Наши работы</a></li>
@@ -153,28 +153,95 @@
             <div class="maket grid seals__maket">
                 <p class="maket__title">Выберите макет (Шаг 1 из 3)</p>
                 <div class="maket-box grid">
-                    <a href="#" class="maket-box__item active"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
-                    <a href="#" class="maket-box__btn main-btn">Далее</a>
-                </div>
+                    <a class="maket-box__item active"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__item"><img src="img/seal.png" alt="" class="maket-box__img img-responsive"></a>
+                    <a class="maket-box__btn main-btn">Далее</a>
+				</div>
+				<div class="rig-box hide">
+					<div class="product-select active grid">
+						<img src="img/trodat-null.png" alt="" class="product-select__img img-responsive">
+						<p class="product-select__name product-box__name">Без оснастки</p>
+						<p class="product-select__price">331₽</p>
+					</div>
+					<div class="product-select grid">
+						<img src="img/trodat.png" alt="" class="product-select__img img-responsive ">
+						<p class="product-select__name product-box__name">Автоматическая Trodat 42мм</p>
+						<p class="product-select__price">332₽</p>
+					</div>
+					<div class="product-select grid">
+						<img src="img/trodat.png" alt="" class="product-select__img img-responsive ">
+						<p class="product-select__name product-box__name">2 Автоматическая Trodat 42мм</p>
+						<p class="product-select__price">333₽</p>
+					</div>
+					<div class="product-select grid">
+						<img src="img/trodat.png" alt="" class="product-select__img img-responsive ">
+						<p class="product-select__name product-box__name">3 Автоматическая Trodat 42мм</p>
+						<p class="product-select__price">334₽</p>
+					</div>
+					<div class="product-select grid">
+						<img src="img/trodat.png" alt="" class="product-select__img img-responsive ">
+						<p class="product-select__name product-box__name">4 Автоматическая Trodat 42мм</p>
+						<p class="product-select__price">335₽</p>
+					</div>
+					 
+					<a class="rig-box__btn main-btn">Далее</a>
+				</div>
+				<div class="data-box hide">
+					<div class="data-box__field-box">
+						<p class="data-box__text">Наименование:</p>
+						<input type="text" class="data-box__input" placeholder="ООО “КОМПАНИЯ”" required>
+					</div>
+					<div class="data-box__field-box">
+						<p class="data-box__text">Количество:</p>
+						<input type="number" min="1" value="1" class="data-box__input">
+					</div> 
+					<div class="data-box__field-box">
+						<p class="data-box__text">ИНН:</p>
+						<input type="number" min="100" class="data-box__input" placeholder="9999999999" required>
+					</div>
+					<div class="data-box__field-box">
+						<p class="data-box__text">Ваши пожелания:</p>
+						<textarea name="" id="" class="data-box__textarea" rows="4" placeholder="Хочу чтобы..."></textarea>
+					</div>
+					 
+					<div class="data-box__field-box">
+						<p class="data-box__text">ОГРН:</p>
+						<input type="number" min="100" class="data-box__input" placeholder="9999999999999">
+					</div>
+					
+					<div class="data-box__file">
+						<label>
+							Добавить файл
+							<input type="file" name="photo" multiple="" accept="image/*,image/jpeg" class="doc-box__doc">
+						</label>
+					</div> 
+					<div class="data-box__field-box">
+						<p class="data-box__text">Город:</p>
+						<input type="text" class="data-box__input" placeholder="г.Екатеринбург" required>
+					</div>
+					<div class="data-box__btn-box">
+						<a class="data-box__btn main-btn">Добавить в корзину</a>
+						<a href="#fast-order-service" class="data-box__btn_fast main-btn main-btn_blue open-popup">Быстрый заказ</a>
+					</div>
+				</div>
                 <div class="maket-choose">
-                    <p class="maket-choose__title">ВЫБРАНО:</p>
+                    <p class="maket-choose__title">ВЫБРАНо:</p>
 					<p class="maket-choose__text">Макет<span class="maket-choose__text_red">*</span>:</p>
-					<a href="#" class="maket-choose__field">Еще не выбрано...</a>
+					<a id="field-maket" class="maket-choose__field">Еще не выбрано... </a> <span id="price-maket" class="text_blue"> </span>
 					<p class="maket-choose__text">Оснастка<span class="maket-choose__text_red">*</span>:</p>
-					<a href="#" class="maket-choose__field">Еще не выбрано...</a>
+					<a id="field-rig" class="maket-choose__field">Еще не выбрано... </a> <span id="price-rig" class="text_blue"></span> 
 					<p class="maket-choose__text">Данные ООО<span class="maket-choose__text_red">*</span></p>
-					<a href="#" class="maket-choose__field">Еще не выбрано...</a>
+					<a id="field-data" class="maket-choose__field">Еще не выбрано...</a>
 					<p class="maket-choose__text">Дополнительно:</p>
-					<a href="#" class="maket-choose__field">Еще не выбрано...</a>
+					<a id="field-more" class="maket-choose__field">Еще не выбрано... </a> <span id="price-more" class="text_blue"></span>
 					<p class="maket-choose__total">Итого:</p>
 					<p class="maket-choose__value">заполните все обязательные поля</p>
                 </div>
@@ -279,6 +346,13 @@
 			</ul>
 		</div>
 	</footer>	
+	<form id="fast-order-service" class="mfp-hide white-popup">
+		<p class="section-title white-popup__title"> <span class="section-title_blue">Быстрый </span>заказ</p>
+		<input type="text" name="name" class="white-popup__input" placeholder="Как Вас зовут?">
+		<input type="text" name="phone" class="white-popup__input" placeholder="Телефон" required=""> 
+		<button type="submit" class="white-popup__btn main-btn main-btn_blue fast-order__btn">Отправить заявку!</button>
+		<button title="Close (Esc)" type="button" class="mfp-close ">×</button>
+	</form> 
 	<script src="js/scripts.min.js"></script> 
 </body>
 </html>

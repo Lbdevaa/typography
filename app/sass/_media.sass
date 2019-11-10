@@ -21,7 +21,7 @@
 @media only screen and (max-width : 480px)
 	.breadcrumbs
 		font-size: em(12px)
-	.mid-line__btn , .bot-line , .top-line__list
+	.mid-line__btn , .bot-line , .top-line__list, .star:before
 		display: none
 	.mid-line
 		grid-template-rows: 1fr 1fr
@@ -201,7 +201,14 @@
 			grid-column: 1/2
 		&__item:nth-child(even)
 			grid-column: 2/3
-
+		&__item:nth-child(1)
+			grid-row: 1/7 !important
+		&__item:nth-child(3)
+    		grid-row: 7/14 !important
+		&__item:nth-child(4)
+    		grid-row: 9/15 !important
+		&__item:nth-child(n+5)
+			display: none
 
 		// &__item:nth-child(-n+4):nth-child(odd) 
 		// 		grid-row: 5/12
@@ -221,7 +228,58 @@
 			text-align: center
 			// padding-top: em(10px)
 			height: max-content
-
+	
+	.main-calc
+		grid-template-columns: 1fr 1fr
+		grid-gap: 20px 15px 
+		select
+			width: 100% !important
+			font-size: em(11px) !important 
+		&__text
+			font-size: em(12px) 
+		&__wrap-size, &__wrap-paper, &__wrap-type, &__wrap-fold, &__wrap-round
+			grid-column: 1/2  
+		&__wrap-format, &__wrap-color, &__wrap-lamination, &__wrap-sum, &__add-btn
+			grid-column: 2/3 
+		
+		&__add-btn
+			padding: em(7px) 0
+	.main-page-calc
+		padding: 0
+		border: none
+		&__table
+			border: none
+			margin: 0 0 30px
+			padding: 0
+		&__list
+			grid-row-gap: 20px
+		&__type, &__text:nth-of-type(2), &__minus, &__plus
+			display: none
+		&__text:last-child
+			grid-column: 3/4
+		&__footer
+			grid-template-columns: 1fr
+			border-bottom: 1px solid #c4c4c4
+			padding-bottom: 20px
+			margin-bottom: 40px
+		&__footer-amount
+			font-size: em(20px)
+		&__total
+			display: grid
+			grid-template-columns:  1fr max-content
+		&__btn
+			padding: em(6px) 0
+		&__item
+			grid-column-gap: 13vw
+			p, .main-page-calc__amount
+				font-size: em(12px)
+		&__head
+			grid-column-gap: 10vw
+		&__item, &__head
+			grid-template-columns: repeat(4, max-content)
+	.release
+		&__list, &__title
+			display: none
 	// about page
 	.about
 		margin-bottom: 20px
@@ -237,7 +295,12 @@
 		margin-bottom: 30px
 		&__item:nth-child(n+2)
 			display: none
-			
+	#main-calc
+		&__width, &__height
+			width: 40%
+			padding: em(8px)
+		&__round+label
+			margin-left: 0
 	.line-box
 		&__text-box
 			grid-gap: 15px
@@ -342,7 +405,9 @@
 			grid-row: 2/3
 		&__add-btn, &__fast
 			display: block
-			margin-bottom: 15px
+			margin: 0 0 15px
+		&__form
+			margin-bottom: 30px
 	.about-product
 		margin-bottom: 40px
 		>div
@@ -355,7 +420,8 @@
 			display: block
 			max-width: 185px
 			margin: auto
-
+	.product-calc
+		grid-template-columns: repeat(3, 110px)
 	.cart
 		margin-bottom: 65px
 		>div
@@ -419,8 +485,21 @@
 		&__btn
 			grid-column: 1/4
 			margin: auto
+	.rig-box
+		grid-template-columns: 1fr 1fr 1fr
+		&__btn
+			grid-column: 1/4
+	.data-box
+		&__input
+			font-size: em(14px)
+			padding: em(12px)
+		&__btn
+			display: block
+			margin-bottom: 10px
 	.maket-choose
 		width: 100%
+		&__field
+			display: block
 	.product-box
 		grid-template-columns: 1fr 1fr
 		&__item

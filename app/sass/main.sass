@@ -5,6 +5,7 @@
 // @import "icons"
 
 // Пользовательские стили
+
 h2 
     font-weight: 500
 .main-select
@@ -28,19 +29,79 @@ h2
         margin: 0
     &__line
         display: inline-block
-
-.header
+.star
+    position: relative
+    &::before
+        content: ''
+        background-image: url('../img/bg-star.png')
+        background-size: cover
+        position: absolute
+        width: 1775px
+        height: 1894px
+        left: -360px
+        z-index: -1 
+.main-btn
+    color: $dark
+    background-color: $yellow
+    border: 1px solid $yellow
+    font-size: em(24px)
+    text-decoration: none
+    font-family: $teko
+    padding: em(6px) em(20px) em(6px) em(20px)
+    border-radius: 5px
+    height: 50px
+    line-height: 1.5
+    transition: ease-in .2s all
+    cursor: pointer
+    text-align: center 
+    // min-width: 208px
+    &:hover
+        background: none
+    &_blue
+        color: $blue
+        background-color: #ffffff
+        border-color: $blue
+        &:hover
+            background-color: $blue
+            color: #ffffff
+    &_right
+        float: right
+        position: relative
+        padding: em(4px) em(44px) em(4px) em(26px)
+        transform: translateY(-12%)
+        text-align: unset
+        &::after
+            content: ''
+            background-image: url('../img/arrow-right.svg')
+            background-size: cover
+            width: 5.5px
+            height: 11px
+            position: absolute
+            font-size: 40px
+            line-height: 40px
+            top: 50%
+            transform: translateY(-60%)
+            right: 40px
+        &:hover::after
+            background-image: url('../img/arrow-right-white.svg')
+            
+            
+            
+.header 
     >.container
-        max-width: 1180px
+        max-width: 1180px  
 .top-line 
     border-bottom: 1px solid $blue
-    >div
+    
+    >div 
         max-width: 1180px
+    
     &__list
         padding: 0 
+        grid-template-columns: repeat(5, max-content)
+        justify-content: space-between
     &__item
         display: inline-block
-        margin-right: 120px
         &:last-child 
             margin-right: 0 
     &__url
@@ -55,10 +116,11 @@ h2
     &__phone-time
         display: grid
         grid-template-columns: max-content max-content
-        grid-column-gap: 14px
+        grid-column-gap: 20px
     &__time
         margin: 0
         grid-column: 2/3
+        font-size: em(14px)
     &__phone
         font-size: em(36px)
         color: $dark
@@ -84,44 +146,11 @@ h2
             border-radius: 1000em 
             color: $dark
                         // display: block
+    &__btn
+        padding: em(9px) em(30px)
+        line-height: 1
+        display: block
 
-.main-btn
-    color: $dark
-    background-color: $yellow
-    border: 1px solid $yellow
-    font-size: em(24px)
-    text-decoration: none
-    font-family: $teko
-    padding: em(6px) em(20px) em(6px) em(20px)
-    border-radius: 5px
-    height: 50px
-    line-height: 1.5
-    transition: ease-in .2s all
-    cursor: pointer
-    text-align: center 
-    min-width: 208px
-    &:hover
-        background: none
-    &_blue
-        color: $blue
-        background-color: #ffffff
-        border-color: $blue
-        &:hover
-            background-color: $blue
-            color: #ffffff
-    &_right
-        float: right
-        position: relative
-        padding: em(4px) em(44px) em(4px) em(26px)
-        transform: translateY(-12%)
-        text-align: unset
-        &::after
-            content: '›'
-            position: absolute
-            font-size: 40px
-            line-height: 40px
-            top: 4px
-            right: 40px
 .bot-line
     border-bottom: 1px solid #E5E5E5
 
@@ -130,6 +159,7 @@ h2
     padding: 0
     margin: 0
     position: relative
+    
     >div
         max-width: 1180px
     &__item
@@ -358,13 +388,16 @@ h2
 .pop-products
     grid-template-columns: repeat(4, 1fr)
     grid-gap: 32px 
+    
     &__url
-        display: block
+        display: block 
     &__img
         border-radius: 5px
         max-height: 173px
         margin-bottom: 25px
         width: 100%
+        &:hover 
+            opacity: 0.4
     &__title
         font-size: em(18px)
         color: $dark
@@ -375,6 +408,31 @@ h2
         font-family: $adiHaus
         font-size: em(12px)
         color: #6a6a6a
+#fast-order  
+.white-popup
+    background-color: #fff 
+    padding: 50px
+    position: relative
+    max-width: 480px
+    margin: auto
+    border-radius: 5px
+    &__title
+        text-align: center
+        margin-bottom: em(18px)
+    &__input
+        display: block
+        font-family: $adiHaus
+        font-size: em(14px)
+        color: $dark
+        width: 100%
+        border: none
+        margin-bottom: em(32px)
+        border-bottom: 1px solid $dark
+    &__btn
+        margin: auto
+        display: block 
+    .mfp-close
+        font-size: em(40px)
 
 // about-poligraphy
 .about-poligraphy 
@@ -435,12 +493,174 @@ h2
     margin-bottom: 65px
     &__title
         margin-bottom: em(20px)
-.main-page-calc
-    height: 680px
+    &__main-calc
+        margin-bottom: 20px
+.main-page-calc 
     border: 1px solid #C4C4C4
     border-radius: 5px
-    
+    padding: em(30px)
+    &__table  
+        border-bottom:  1px solid #C4C4C4
+        padding-bottom: 20px
+        margin-bottom: 20px 
+    &__text 
+        // justify-self: center
+        font-size: em(14px)
+        color: #c4c4c4
+        margin: 0
+        &:last-child
+            grid-column: 4/5
+    &__format, &__type, &__amount, &__price 
+        font-family: $adiHaus
+        font-size: em(18px)  
+        margin: 0
+    &__list
+        grid-column: 1/6
+        margin: 0
+        padding: 0
+        grid-row-gap: 33px
+    &__head
+        grid-template-columns: 300px 300px 200px 100px 
+        grid-column-gap: 10px
+    &__item
+        grid-template-columns: 300px 300px 200px 100px 50px
+        // justify-content: space-between
+        grid-column-gap: 10px
+        align-items: center
+    &__amount
+        width: 40px
+        margin: 0 5px
+        border: none  
+    &__del
+        text-decoration: none
+        color: $blue
+        font-size: em(28px)
+        font-weight: bold
+    &__plus, &__minus
+        font-size: em(24px)
+        font-weight: bold
+        cursor: pointer
+    &__footer
+        grid-template-columns: max-content max-content
+        justify-content: space-between
+    &__footer-amount
+        font-size: em(36px)
+        text-transform: uppercase
+        font-family: $teko
+        margin: 0 0 em(8px)
+        align-self: center
+.release 
+    &__title
+        font-size: em(24px)
+        font-family: $teko
+        margin: 0 0 em(18px)
+    &__list 
+        margin: 0
+        padding: 0
+    &__item
+        grid-template-columns: repeat(5, 1fr)
+        grid-column-gap: 50px 
+        padding: em(12px)
+        &:nth-child(odd)
+            background-color: #F6EFE7
+    &__text
+        margin: 0
+        font-size: em(14px)
+.main-calc
+    grid-template-columns: repeat(12, max-content)
+    grid-gap: 20px 30px
+    border-bottom: 1px solid #C4C4C4
+    padding-bottom: 35px
+    input, select
+        font-family: $adiHaus
+        border: 1px solid #C4C4C4
+        border-radius: 5px
+        height: 42px
+    select
+        background: #E5E5E5  
+    &__text
+        max-width: max-content
+        margin: 0 0 em(10px)
+        font-size: em(14px)
+    &__size
+        margin: 0
+        // width: 20px
+        display: inline-block
+        text-align: center
+        font-size: 24px
+    &__wrap
+        &-size
+            grid-column: 1/4 
+            >input
+                width: 30px
+        &-format
+            grid-column: 4/5 
+        &-paper
+            grid-column: 5/7
+        &-color
+            grid-column: 7/10
+        &-type
+            grid-column: 10/13
+        &-lamination
+           
+            grid-column: 1/4 
+        &-fold
+           
+        &-sum
+           
+        &-round
+    &__add-btn
+        grid-column: 7/11
+        align-self: center
 
+#main-calc  
+    &__width, &__height
+        // width: 52px
+        width: 70px
+        padding: em(8px) em(18px)
+        font-size: em(18px) 
+    &__format
+        width: 89px
+        padding: em(8px)
+        font-size: em(18px)
+    &__paper
+        width: 296px
+        font-size: em(14px)
+        padding: em(13px) 
+    &__color, &__type, &__lamination
+        width: 160px
+        padding: em(10px)
+    &__fold, &__sum
+        width: 98px
+        padding: em(12px)
+    &__round    
+        display: none
+        &+label
+            display: inline-block 
+            width: 60px
+            height: 30px
+            position: relative
+            transition: 0.3s
+            margin: 0px 20px
+            border-radius: 20px
+            border: 1px solid #c4c4c4
+            // box-shadow: 1px 1px 3px #aaa
+            &::before, &::after
+                content: ''
+                display: block
+                position: absolute
+                left: 0px
+                top: 0px
+                width: 30px
+                height: 30px
+                transition: 0.3s
+                cursor: pointer
+            &::after 
+                background: $blue
+                border-radius: 50%    
+        &:checked+label:after
+            left: calc(100% - 30px)
+    
 .main-pay
     margin-bottom: 65px
        
@@ -733,6 +953,7 @@ h2
         grid-row: 1/4
         width: 100%
         height: 100%
+        max-height: 230px
         object-fit: cover
     &__title
         font-size: em(18px)
@@ -742,7 +963,10 @@ h2
         margin: 0
         max-width: 235px
     &__btn 
-        padding: em(4px) em(10px) em(4px) em(16px)
+        padding: em(4px) em(32px) em(4px) em(16px)
+        width: max-content
+        &::after
+           right: 20px 
 // single product page
 .product
     margin-bottom: 80px
@@ -775,6 +999,55 @@ h2
             // box-shadow: inset 0 0 240px 240px rgba(0, 0, 0, 0.66) 
     &__form
         margin-bottom: 45px
+    &__form-name
+        font-family: $teko
+        font-size: em(24px)
+        margin: 0 0 em(26px)
+    &__add-btn
+        margin: 0 em(10px) em(10px) 0
+        display: inline-block 
+    &__fast
+        display: inline-block
+    &__piece-price, &__sum
+        font-size: em(14px)
+        margin: 0
+        display: inline-block
+    &__piece-value
+        margin-right: em(40px)
+        font-size: em(24px)
+
+
+.product-calc
+    grid-template-columns: repeat(3, 125px)
+    grid-row-gap: 26px
+    grid-column-gap: 16px
+    border-bottom: 1px solid #C4C4C4
+    padding-bottom: 26px
+    margin-bottom: 35px 
+    select 
+        background: #e5e5e5
+        padding: em(16px)
+        font-size: 14px
+        font-family: $adiHaus
+        border-radius: 5px
+    input, select
+        width: 100%
+    &__text
+        font-size: em(14px)
+        margin: 0 0 em(10px)
+    &__wrap-paper
+        grid-column: 2/4
+        justify-self: end
+    &__wrap-color
+        grid-column: 1/3
+#product-calc
+    &__sum
+        border-radius: 5px
+        border: 1px solid #C4C4C4
+        padding: em(18px) em(22px)
+        font-size: em(14px)
+        font-family: $adiHaus
+
 .about-product
     margin-bottom: 125px
     >div
@@ -965,9 +1238,12 @@ h2
     &__name
         font-size: em(18px)
         text-align: center
-        margin: 0
+        margin: 0 
 .layout
     margin-bottom: 100px
+    &__text-wrap
+        &.hide
+            display: none
     &__title
         font-size: em(30px)
         font-family: $teko
@@ -1023,9 +1299,8 @@ h2
 .maket-box
     grid-template-columns: repeat(5, 1fr)
     grid-gap: 25px 15px
-    &__item
-        // width: 147px
-        // height: 147px
+    max-height: 150px
+    &__item 
         display: block 
         background-repeat: no-repeat
         background-position: center center 
@@ -1037,9 +1312,60 @@ h2
     &__img  
         margin: auto
     &__btn
-        grid-column: 1/6
-        max-width: 190px
+        grid-column: 1/6 
         justify-self: end
+        padding: em(6px) em(46px)
+.rig-box
+    grid-template-columns: repeat(5, 1fr)
+    grid-gap: 15px 
+    &.hide
+        display: none
+    .product-select
+        max-height: 220px
+    &__btn
+        grid-column: 1/6
+        padding: em(6px) em(46px)
+        justify-self: end
+.data-box
+    grid-template-columns: 1fr 1fr 
+    grid-column-gap: 50px 
+    &.hide
+        display: none
+    &__input, &__textarea
+        width: 100%
+        font-family: $adiHaus
+        border: 1px solid #C4C4C4 
+        border-radius: 5px
+        padding: 15px
+    &__textarea
+        // height: 85px
+    &__text
+        font-size: em(14px)
+        margin: 0 0 em(10px)
+    &__btn-box
+        grid-column: 2/3
+        align-self: center
+    &__btn 
+        padding: em(8px) em(15px)    
+        &_fast
+            padding: em(8px) em(15px)    
+    &__file
+        align-self: center
+        label
+            text-decoration: underline
+            color: #c4c4c4
+            padding-left: 30px
+            line-height: 2
+            position: relative
+            cursor: pointer
+            &::before
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                width: 22px
+                height: 27px
+                background: url(../img/icon-doc.png)
 .maket-choose
     width: 232px
     height: 100%
@@ -1052,6 +1378,7 @@ h2
         font-size: em(24px)
         font-family: $teko
         margin: 0 0 em(16px)
+        text-transform: uppercase
     &__text
         color: #6a6a6a
         font-size: em(12px)
@@ -1060,9 +1387,10 @@ h2
             color: #ff4b4b
     &__field
         color: #6a6a6a
-        display: block
+        display: inline-block
         font-size: em(14px)
         margin: 0 0 em(34px)
+        max-width: 80%
     &__total
         color: $blue
         font-size: em(24px)
@@ -1116,7 +1444,7 @@ h2
     &__title
         margin-bottom: em(18px)
         grid-column: 1/3
-    &__product
+    &__product 
         grid-template-columns: 1fr 1fr 1fr
         grid-gap: 15px
     &__form-box
@@ -1336,9 +1664,12 @@ h2
         font-family: $adiHaus
  
 
+.text_blue
+    color: $blue
 
-
-
+#price-maket, #price-more, #price-rig
+    float: right
+    
 
 
 @import "media" // Всегда в конце

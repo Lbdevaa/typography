@@ -21,8 +21,8 @@
 <body>
 	<header class="header">
 		<div class="top-line">
-			<div class="container">
-				<ul class="top-line__list">
+			<div class="container star">
+				<ul class="top-line__list grid">
 					<li class="top-line__item"><a href="/about.html" class="top-line__url">О компании</a></li>
 					<li class="top-line__item"><a href="/contacts.html" class="top-line__url">Контакты</a></li>
 					<li class="top-line__item"><a href="/portfolio.html" class="top-line__url">Наши работы</a></li>
@@ -175,22 +175,41 @@
         <div class="container">
             <p class="layout__title">Подготовка макета:</p>
             <div class="layout__btn-box btn-box grid">
-                <a href="#" class="main-btn main-btn_blue layout__btn active">Цифровая печать</a>
-                <a href="#" class="main-btn main-btn_blue layout__btn">Широкоформатная печать</a>
-                <a href="#" class="main-btn main-btn_blue layout__btn">Плоттерная резка</a>
-            </div>
-            <p class="layout__text"><span class="layout__text_bold">Формат печати: </span>Максимальный размер бумаги – 320х450 мм; Максимальная  запечатываемая область – 310х440 мм.</p>
-            <ul class="layout__list">
-                <li class="layout__item">Типы файлов: TIFF (без LZW компрессии), CDR, PSD, EPS, PDF, AI,  разрешение не менее 300 dpi; </li>
-                <li class="layout__item">Припуски под подрезку должны быть не менее 2мм с каждой стороны</li>
-                <li class="layout__item">Все эффекты (тени, линзы, маски, прозрачности, пост-скрипт заливки, текстурные заливки, Power Clip, сетчатый градиент (Gradient Mesh)) должны быть растрированы в CMYK 300dpi.</li>
-                <li class="layout__item">Масштаб изображения должен быть 1:1;</li>
-                <li class="layout__item">Поле изображения (иллюстрации, подложки, плашки и т. д. – Bleed Box) по 3 мм с каждой стороны должно выходить за пределы обрезного формата «на вылет»;</li>
-                <li class="layout__item">Значимые части изображения и текст должны размещаться не ближе 4 мм до обрезного формата документа.</li>
-                <li class="layout__item">Используется палитра цветовой модели CMYK;</li>
-                <li class="layout__item">Используемые шрифты и логотипы должны быть конвертированы в кривые;</li>
-                <li class="layout__item">Не надо отображать в макете линии скругления, биговки и прочих вспомогательные элементы (Необходимо размещать данные элементы в отдельном слое или прикладывать привью файл).</li>
-            </ul>
+                <a class="main-btn main-btn_blue layout__btn active">Цифровая печать</a>
+                <a class="main-btn main-btn_blue layout__btn">Широкоформатная печать</a>
+                <a class="main-btn main-btn_blue layout__btn">Плоттерная резка</a>
+			</div>
+			<div class="layout__text-wrap"> 
+				<p class="layout__text"><span class="layout__text_bold">Формат печати: </span>Максимальный размер бумаги – 320х450 мм; Максимальная  запечатываемая область – 310х440 мм.</p>
+				<ul class="layout__list">
+					<li class="layout__item">Типы файлов: TIFF (без LZW компрессии), CDR, PSD, EPS, PDF, AI,  разрешение не менее 300 dpi; </li>
+					<li class="layout__item">Припуски под подрезку должны быть не менее 2мм с каждой стороны</li>
+					<li class="layout__item">Все эффекты (тени, линзы, маски, прозрачности, пост-скрипт заливки, текстурные заливки, Power Clip, сетчатый градиент (Gradient Mesh)) должны быть растрированы в CMYK 300dpi.</li>
+					<li class="layout__item">Масштаб изображения должен быть 1:1;</li>
+					<li class="layout__item">Поле изображения (иллюстрации, подложки, плашки и т. д. – Bleed Box) по 3 мм с каждой стороны должно выходить за пределы обрезного формата «на вылет»;</li>
+					<li class="layout__item">Значимые части изображения и текст должны размещаться не ближе 4 мм до обрезного формата документа.</li>
+					<li class="layout__item">Используется палитра цветовой модели CMYK;</li>
+					<li class="layout__item">Используемые шрифты и логотипы должны быть конвертированы в кривые;</li>
+					<li class="layout__item">Не надо отображать в макете линии скругления, биговки и прочих вспомогательные элементы (Необходимо размещать данные элементы в отдельном слое или прикладывать привью файл).</li>
+				</ul>
+			</div>
+			<div class="layout__text-wrap_2" style="display: none;"> 
+				<p class="layout__text"><span class="layout__text_bold">2 Формат печати: </span>Максимальный размер бумаги – 320х450 мм; Максимальная  запечатываемая область – 310х440 мм.</p>
+				<ul class="layout__list">
+					<li class="layout__item">Поле изображения (иллюстрации, подложки, плашки и т. д. – Bleed Box) по 3 мм с каждой стороны должно выходить за пределы обрезного формата «на вылет»;</li>
+					<li class="layout__item">Припуски под подрезку должны быть не менее 2мм с каждой стороны</li>
+					<li class="layout__item">Все эффекты (тени, линзы, маски, прозрачности, пост-скрипт заливки, текстурные заливки, Power Clip, сетчатый градиент (Gradient Mesh)) должны быть растрированы в CMYK 300dpi.</li>
+					<li class="layout__item">Типы файлов: TIFF (без LZW компрессии), CDR, PSD, EPS, PDF, AI,  разрешение не менее 300 dpi; </li>
+					<li class="layout__item">Масштаб изображения должен быть 1:1;</li>
+				</ul>
+			</div>
+			<div class="layout__text-wrap_3" style="display: none;"> 
+				<p class="layout__text"><span class="layout__text_bold">3 Формат печати: </span>Максимальный размер бумаги – 320х450 мм; Максимальная  запечатываемая область – 310х440 мм.</p>
+				<ul class="layout__list">
+					<li class="layout__item">Припуски под подрезку должны быть не менее 2мм с каждой стороны</li>
+					<li class="layout__item">Типы файлов: TIFF (без LZW компрессии), CDR, PSD, EPS, PDF, AI,  разрешение не менее 300 dpi; </li>
+				</ul>
+			</div>
         </div>
     </section>
     <footer class="footer">
