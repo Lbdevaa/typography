@@ -36,7 +36,8 @@ h2
         background-image: url('../img/bg-star.png')
         background-size: cover
         position: absolute
-        width: 1775px
+        // width: 1775px
+        width: 100vw
         height: 1894px
         left: -360px
         z-index: -1 
@@ -56,7 +57,7 @@ h2
     text-align: center 
     // min-width: 208px
     &:hover
-        background: none
+        background: $dYellow
     &_blue
         color: $blue
         background-color: #ffffff
@@ -64,6 +65,10 @@ h2
         &:hover
             background-color: $blue
             color: #ffffff
+    &_white:hover
+        background-color: #ffffff 
+        color: $blue
+
     &_right
         float: right
         position: relative
@@ -85,7 +90,12 @@ h2
         &:hover::after
             background-image: url('../img/arrow-right-white.svg')
             
-            
+.btn-blue
+    border-color: $blue
+    background-color: $blue
+    color: #ffffff
+    &:hover
+        background-color: $dBlue
             
 .header 
     >.container
@@ -178,6 +188,7 @@ h2
         font-size: em(16px)
         padding: em(12px) em(20px)
         display: block
+        min-width: 120px
 
 
 .second-nav
@@ -275,9 +286,7 @@ h2
     &__form-btn
         color: #ffffff
         border-color: #ffffff
-        background: none
-        &:hover
-            color: $yellow
+        background: none 
 
     &__contacts 
         opacity: 0.86
@@ -311,16 +320,22 @@ h2
     background-size: cover
     box-shadow: inset 0 0 240px 240px rgba(0,0,0,.66)
     position: relative
-    &>div
+    .container
         grid-template-columns: 1fr 1fr
         padding: 90px 38px
         // grid-column-gap: 92px
-.slide-bg
-    background-color: $blue
-    width: 60vw
-    height: 100%
-    z-index: 1
-    position: absolute
+    &__bg
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+        // background-color: $blue
+        // width: 100vw
+        // height: 100%
+        // z-index: 1
+        // position: absolute
+        // background-size: cover
+    .owl-dot
+        // display: none
 .slide-left
     max-width: 460px
     z-index: 5
@@ -458,7 +473,20 @@ h2
         max-height: 300px
         border-radius: 5px
         
-
+.section-slider
+    position: relative
+    .owl-prev, .owl-next
+        position: absolute
+        top: 0
+        height: 100% 
+    .owl-prev
+        left: -1vw
+        outline: none
+        &:hover img
+            // border: solid 2px #ffffff
+    .owl-next
+        right: -1vw
+        outline: none
 .advantages
     grid-template-columns: repeat(4, 1fr)  
     grid-column-gap: 65px

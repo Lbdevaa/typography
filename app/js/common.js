@@ -97,8 +97,23 @@ $(function() {
 			return false;
 		});
 	});
+	//слайдер
+	$('.slide').owlCarousel({
+		items: 1,
+		dots: false,
+		nav: false,
+		autoplay: true 
 
+	});
+	// о компании
+	$('.about-slider').owlCarousel({
+		items: 1,
+		dots: false,
+		nav: true,
+		navText: ['<img style="position: absolute;top: 60%;" src="../img/left-arrow.svg">','<img style="position: absolute;top: 60%;" src="../img/right-arrow.svg">'],  
+		autoplay: true 
 
+	});
 	// mask for form-call
 	// $("input[name='phone']").inputmask("+7 (999) 999-99-99"); 
 	

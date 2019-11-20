@@ -32,6 +32,7 @@ gulp.task('js', function() {
 		'app/libs/jquery/dist/jquery.min.js', 
 		// 'app/libs/Inputmask/inputmask.binding.js',
 		// 'app/libs/Inputmask/jquery.inputmask.min.js',
+		'app/libs/OwlCarousel2/owl.carousel.min.js',
 		'app/libs/popup/jquery.magnific-popup.min.js',	
 		'app/js/common.js', // Always at the end
 		])
