@@ -117,6 +117,19 @@ $(function() {
 	// mask for form-call
 	// $("input[name='phone']").inputmask("+7 (999) 999-99-99"); 
 	
+	// смена картинок в продукте и о компании
+	$('.product__img').click(function(){
+		$('.product__img.active').removeClass("active"); 
+		var sourceImg = $(this).attr('src');
+		$(this).addClass('active'); 
+		$('.product__big-img').attr('src',sourceImg);
+	})
+	$('.about-gallery__img').click(function(){
+		$('.about-gallery__img.active').removeClass("active"); 
+		var sourceImg = $(this).attr('src');
+		$(this).addClass('active'); 
+		$('.about-gallery__img-main').attr('src',sourceImg);
+	})
 
 	// весь каталог только на главной
 	var allCatalog = document.querySelector('.pop-pagination');
